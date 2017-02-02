@@ -3,17 +3,18 @@ $(document).ready(function() {
 	paper.install(window);
 	paper.setup(document.getElementById('mainCanvas'));
    
-	var c = Shape.Circle(200, 200, 80);
-   	c.fillColor = 'black';
-	var text = new PointText(200, 200);
-	text.justification = 'center';
-	text.fillColor = 'white';
-	text.fontSize = 20;
-	text.content = 'Hello World';
-	
+	// Create a rectangle shaped path with its top left point at
+	// {x: 75, y: 75} and a size of {width: 75, height: 75}
+	var path = new Path.Rectangle({
+	point: [75, 75],
+	size: [75, 75],
+	strokeColor: 'black'
+	});
+
 	function onFrame(event) {
-		c.rotate(3);	
-	}
+	// Each frame, rotate the path by 3 degrees:
+	path.rotate(3);
+	}	
 	
 	paper.view.draw();
 });
