@@ -1,4 +1,3 @@
-$(document).ready(function() {
 	paper.install(window);
 	paper.setup(document.getElementById('mainCanvas'));
    
@@ -16,4 +15,3 @@ $(document).ready(function() {
 	}	
 	
 	paper.view.draw();
-});
