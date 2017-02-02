@@ -11,5 +11,9 @@ $(document).ready(function() {
 	text.fontSize = 20;
 	text.content = 'Hello World';
 	
+	function onFrame(event) {
+		c.rotate(3);	
+	}
+	
 	paper.view.draw();
 });
